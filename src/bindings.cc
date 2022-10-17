@@ -51,7 +51,7 @@ static void Recognizer_SetWords(Recognizer &self, int words) {
 }
 
 static void Recognizer_SetPartialWords(Recognizer &self, int words) {
-    KALDI_VLOG(2) << "Setting words to " << words;
+    KALDI_VLOG(2) << "Setting partial words to " << words;
     self.SetPartialWords(words);
 }
 
