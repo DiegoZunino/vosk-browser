@@ -1,6 +1,6 @@
 {
   "name": "@diegozunino/vosk-browser",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "In-browser speech recognition based on a WASM build of Vosk",
   "main": "./dist/vosk.js",
   "module": "./dist/vosk.js",
@@ -15,7 +15,7 @@
     "asr",
     "stt"
   ],
-  "author": "Diego Zunino <diego.zunino@ellycode.com>",
+  "author": "Diego Zunino <diego.zunino@hotmail.it>",
   "repository": {
     "type": "git",
     "url": "git://github.com/diegozunino/vosk-browser.git"
