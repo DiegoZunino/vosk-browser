@@ -20,5 +20,6 @@ jobs:
       - run: npm install
         working-directory: ${{env.working-directory}}
       - uses: geeman201/conventional-changelog-npm-publish/@v14
+        working-directory: ${{env.working-directory}}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
