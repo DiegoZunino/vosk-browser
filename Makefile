@@ -1,7 +1,7 @@
 MAKEFILE_ROOT := $(realpath $(dir $(firstword $(MAKEFILE_LIST))))
 ENV := 
-BUILDER_TAG ?= 0.0.6
-REPOSITORY = ghcr.io/ccoreilly/
+BUILDER_TAG ?= 0.0.8
+REPOSITORY = ghcr.io/diegozunino/
 
 ifdef DEBUG
 ENV += -e DEBUG=1
