@@ -20,7 +20,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - uses:  'phips28/gh-action-bump-version@master'
         env:
-          working-directory: lib
+          PACKAGEJSON_DIR: lib
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           version-type:  'minor'
