@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-    - develop
+    - publish-npm-package
 
 jobs:
   publish-gpr:
@@ -18,8 +18,12 @@ jobs:
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
+      - uses:  'phips28/gh-action-bump-version@master'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          version-type:  'minor'
       - run: npm ci
-      - run: npm version patch
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
