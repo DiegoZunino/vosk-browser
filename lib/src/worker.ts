@@ -218,6 +218,7 @@ export class RecognizerWorker {
         const recognizer = this.recognizers.get(recognizerId)!;
         recognizer.words = value;
         recognizer.recognizer.SetWords(value);
+        recognizer.recognizer.SetPartialWords(value);
         break;
       case "logLevel":
         const level = message.value;
@@ -264,6 +265,7 @@ export class RecognizerWorker {
       if (recognizer.words) {
         newRecognizer.words = true;
         newRecognizer.recognizer.SetWords(true);
+        newRecognizer.recognizer.SetPartialWords(true);
       }
       recognizer = newRecognizer;
     }
